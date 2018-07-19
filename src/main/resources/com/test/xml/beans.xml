@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+	default-init-method="postConstructGeneral" default-destroy-method="preDestroyGeneral"
+	>
+
+	<bean id="test" class="com.test.entities.Mascota" init-method="postConstructInClass" destroy-method="preDestroyInClass">
+		<property name="name" value="Lorenzo"></property>
+		<property name="dueño" ref="dueño"></property>
+	</bean>
+	
+	<bean id="dueño" class="com.test.entities.Dueño">
+		<property name="name" value="Javier"></property>
+	</bean>	
+	
+<!-- 	<bean class="com.test.entities.Mascota" init-method="postConstructInClass"></bean>
+	
+	<bean class="com.test.entities.Mascota" destroy-method="preDestroyInClass"></bean> -->
+	
+</beans>
