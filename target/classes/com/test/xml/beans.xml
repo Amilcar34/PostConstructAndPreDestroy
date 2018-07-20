@@ -5,6 +5,8 @@
 	default-init-method="postConstructGeneral" default-destroy-method="preDestroyGeneral"
 	>
 
+	<bean class="com.test.entities.PostConstructAndPreDestroyBySpring"></bean>
+
 	<bean id="test" class="com.test.entities.Mascota" init-method="postConstructInClass" destroy-method="preDestroyInClass">
 		<property name="name" value="Lorenzo"></property>
 		<property name="dueño" ref="dueño"></property>
